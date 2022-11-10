@@ -1,7 +1,7 @@
 import tkinter as tk
 import os
 
-PATH = 'C:/Users/Mladen/Documents/Python/BEDcalc_GUI/'
+PATH = "C:/Users/Mladen/Documents/Python/BEDcalc_GUI/"
 
 root = tk.Tk()  # pocetak svakog
 root.title("BED račun")
@@ -136,20 +136,27 @@ def plus():
         x=345, y=19
     )
 
+
 def reset_window():
     root.destroy()
-    os.startfile(PATH + 'Kalkulacija_urednije.pyw')
+    os.startfile(PATH + "Kalkulacija_urednije.pyw")
+
 
 def new_window():
-    os.startfile(PATH + 'Kalkulacija_urednije.pyw')
+    os.startfile(PATH + "Kalkulacija_urednije.pyw")
 
-#dugme za novi prozor
-nova_instanca = reset = tk.Button(root, text="Novi", height=1, width=4, fg="white", bg ='green', command=new_window)
-reset.place(x=375,y=115)
 
-#dugme za reset
-reset = tk.Button(root, text="Reset", height=1, width=4, fg="white", bg ='red', command=reset_window)
-reset.place(x=320,y=115)
+# dugme za novi prozor
+nova_instanca = reset = tk.Button(
+    root, text="Novi", height=1, width=4, fg="white", bg="green", command=new_window
+)
+reset.place(x=375, y=115)
+
+# dugme za reset
+reset = tk.Button(
+    root, text="Reset", height=1, width=4, fg="white", bg="red", command=reset_window
+)
+reset.place(x=320, y=115)
 
 # dugme za BED1
 BED1 = tk.Button(root, text="BED1", height=2, width=8, fg="blue", command=BED_racun1)
